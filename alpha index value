@@ -1,0 +1,13 @@
+import java.util.*;
+class main{
+    public static void main(String args[]){
+        String str="the jungle string";
+        for(int i=97;i<=122;i++){
+            if(str.contains(Character.toString(i))){
+                System.out.print(Character.toString(i)+""+(str.indexOf(i))+" ");
+            }else{
+                System.out.print(Character.toString(i)+"-1"+" ");
+            }
+        }
+    }
+}
