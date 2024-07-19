@@ -2,7 +2,7 @@ import java.util.*;
 
 class Main {
     public static void main(String args[]) {
-        String str = "HeLlOJaVa";
+        String str = "HeLlOJaVa??**@@";
         char ch[] = str.toCharArray();
         int low_c = 0;
         int upp_c = 0;
@@ -15,6 +15,8 @@ class Main {
          } else if (Character.isUpperCase(c)) {
                 upp_c++;
                 ans= Character.toLowerCase(c);
+            }else{
+                ans=c;
             }
              System.out.print(ans);
         }
