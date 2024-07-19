@@ -1,0 +1,12 @@
+import java.util.*;
+class main{
+    public static void main(String args[]){
+        char n=97;
+       
+        for(char i=n;i<=122;i++){
+            if(i%2==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
