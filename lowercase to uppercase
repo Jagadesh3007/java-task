@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        String str = "HeLlOJaVa";
+        char ch[] = str.toCharArray();
+        int low_c = 0;
+        int upp_c = 0;
+        char ans=' ';
+        for (int i = 0; i < ch.length; i++) {
+            char c = ch[i];
+         if (Character.isLowerCase(c)) {
+                low_c++;
+                ans=Character.toUpperCase(c);
+         } else if (Character.isUpperCase(c)) {
+                upp_c++;
+                ans= Character.toLowerCase(c);
+            }
+             System.out.print(ans);
+        }
+        System.out.println();
+        System.out.println("Lowercase count: " + low_c);
+        System.out.println("Uppercase count: " + upp_c);
+      }
+}
