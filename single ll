@@ -1,0 +1,69 @@
+import java.util.*;
+class m{
+    
+        class Node{
+            int data;
+            Node next;
+            
+            public Node(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        
+        public Node head=null;
+        public  Node tail=null;
+    
+       public void addNode(int data){
+           Node newNode=new Node(data);
+           
+          if(head==null){
+              head=newNode;
+              tail=newNode;
+          }else{
+              tail.next=newNode;
+              tail=newNode;
+          }
+      }
+       public void insertAtfront(int data){
+         Node newNode=new Node(data);
+           if(head==null){
+               head=newNode;
+               tail=newNode;
+           }else{
+               newNode.next=head;
+               head=newNode;
+               System.out.print(data+" ");
+               
+           }
+       }
+       
+       public void display(){
+           Node current=head;
+           if(head==null){
+               System.out.println("list is empty");
+               return;
+           }
+           while(current!=null){
+               System.out.println(current.data+" ");
+               current=current.next;
+           }
+        }
+      public static void main(String ars[]){
+         m li=new m();
+         li.addNode(1);
+         li.addNode(2);
+         li.addNode(3);
+         li.addNode(4);
+         
+         li.insertAtfront(1);
+         li.insertAtfront(2);
+         li.insertAtfront(3);
+         li.insertAtfront(4);
+         li.insertAtfront(5);
+         li.display();
+         
+          
+      }
+    
+}
