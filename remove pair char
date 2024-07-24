@@ -1,16 +1,23 @@
 import java.util.*;
 class m{
     public static void main(String args[]){
-        String str="rgbbgr";
-        String str2="";
-        for(int i=0;i<str.length();i++){
-            if(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
-                i+=1;
-        }else{
-            str2+=str.charAt(i);
-            }   
-        } 
-        System.out.println(str2);
-       
+        String str="rgbbgar";
+        String ans=str;
+        boolean found=true;
+        while(found){
+            found=false;
+            StringBuilder sb=new StringBuilder();
+            for(int i=0;i<ans.length();i++){
+                if(i<ans.length()-1 && ans.charAt(i)==ans.charAt(i+1)){
+                    found=true;
+                    i++;
+                   
+                }else{
+                    sb.append(ans.charAt(i));
+                }
+            }
+            ans=sb.toString();
+        }
+        System.out.println(ans);
     }
 }
